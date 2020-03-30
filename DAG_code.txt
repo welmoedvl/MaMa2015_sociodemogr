@@ -1,0 +1,81 @@
+dag {
+"Constr. worker/Daily laborer" [pos="-0.633,-0.683"]
+"Early Life SE" [latent,pos="-1.858,-1.993"]
+"House location IRS program" [latent,pos="-0.922,0.731"]
+"IRS last 6 months" [pos="0.005,0.481"]
+"Malaria before" [pos="-1.182,-1.502"]
+"Malaria in family" [pos="-0.750,-1.946"]
+"Nr people in household" [pos="-0.704,0.444"]
+"Nr persons per room" [pos="0.005,-1.722"]
+"Recruited as patient or control" [pos="0.567,-1.998"]
+"Stagnant waters" [pos="0.563,-1.414"]
+Age [pos="-2.248,-0.224"]
+Education [pos="-1.887,-0.907"]
+Income [pos="-0.641,-1.544"]
+Malaria [outcome,pos="1.021,-0.735"]
+Migrant [pos="-1.573,-0.031"]
+Religion [pos="-2.064,0.747"]
+Roof [pos="-0.352,-0.198"]
+Sex [pos="-2.244,-1.236"]
+preventive_measures [pos="0.769,0.065"]
+"Constr. worker/Daily laborer" -> "Recruited as patient or control"
+"Constr. worker/Daily laborer" -> Income
+"Constr. worker/Daily laborer" -> Malaria
+"Constr. worker/Daily laborer" -> Roof
+"Early Life SE" -> "Constr. worker/Daily laborer"
+"Early Life SE" -> "Malaria before"
+"Early Life SE" -> "Malaria in family"
+"Early Life SE" -> Education
+"Early Life SE" -> Income
+"Early Life SE" -> Migrant
+"House location IRS program" -> "IRS last 6 months"
+"IRS last 6 months" -> Malaria
+"IRS last 6 months" -> preventive_measures
+"Malaria before" -> Malaria
+"Malaria before" -> preventive_measures
+"Malaria in family" -> Malaria
+"Malaria in family" -> preventive_measures
+"Nr people in household" -> "Nr persons per room"
+"Nr persons per room" -> Malaria
+"Recruited as patient or control" -> Malaria
+"Stagnant waters" -> Malaria
+Age -> "Constr. worker/Daily laborer"
+Age -> "Malaria before"
+Age -> Education
+Age -> Malaria
+Age -> Migrant
+Education -> "Constr. worker/Daily laborer"
+Education -> "IRS last 6 months"
+Education -> Malaria
+Education -> Migrant
+Education -> Roof
+Education -> preventive_measures
+Income -> "Nr persons per room"
+Income -> "Stagnant waters"
+Income -> Malaria
+Income -> Roof
+Income -> preventive_measures
+Migrant -> "Constr. worker/Daily laborer"
+Migrant -> "House location IRS program"
+Migrant -> "IRS last 6 months"
+Migrant -> "Nr people in household"
+Migrant -> "Nr persons per room"
+Migrant -> Income
+Migrant -> Malaria
+Migrant -> Roof
+Migrant -> preventive_measures
+Religion -> "Constr. worker/Daily laborer"
+Religion -> "Nr people in household"
+Religion -> Education
+Religion -> Malaria
+Religion -> Migrant
+Roof -> "IRS last 6 months"
+Roof -> Malaria
+Roof -> preventive_measures
+Sex -> "Constr. worker/Daily laborer"
+Sex -> "Malaria before"
+Sex -> Education
+Sex -> Malaria
+Sex -> Migrant
+preventive_measures -> Malaria
+}
